@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #4d4d4d;
+            max-width: 900px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        body, html {
+            height: 99%;
+        }
+        h1 {
+            text-align: center;
+            color: wheat;
+            font-size: 3em;
+        }
+        #noMoveControlling {
+            display: flex;
+        }
+        #noMoveControlling span {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        #noMoveControlling span a {
+            text-align: center;
+            text-decoration: none;
+            color: wheat;
+            font-size: 1.5em;
+
+            border: 2px solid black;
+            border-radius: 1em;
+            background-color: #2d2d2d;
+            width: max-content;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+
+        #moveContoller {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-top: 5em;
+        }
+
+        #moveContoller span {
+            text-align: center;
+            margin-bottom: 2em;
+            font-size: 2em;
+        }
+        #moveContoller span a {
+            padding: 0.2em;
+            border: 2px solid black;
+            text-decoration: none;
+            color: wheat;
+            background-color: #2d2d2d;
+        }
+        p {
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arduino Controller</h1>
+    <div id="noMoveControlling">
+        <span>
+            <a href="/hup">Hupen</a>
+        </span>
+        <span>
+            <a href="/take">Greifarmen</a>
+        </span>
+    </div>
+    <div id="moveContoller">
+        <span></span>
+        <span><a href="/up">↑</a></span>
+        <span></span>
+        <span><a href="/left">←</a></span>
+        <span><a href="/stop">🛑</a></span>
+        <span><a href="/right">→</a></span>
+        <span></span>
+        <span><a href="/down">↓</a></span>
+        <span></span>
+    </div>
+    <p id="github">Besuche das Projekt auf <a href="https://github.com/Fridolin42/arduinocontroller">Github</a></p>
+</body>
+</html>
